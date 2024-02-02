@@ -28,7 +28,7 @@ const MeSection = () => {
       align={"center"}
       color={"white"}
       bg="#3B435E"
-      p={"4rem"}
+      p={isMobile ? "1rem" : "3rem"}
     >
       <Image
         src={pic}

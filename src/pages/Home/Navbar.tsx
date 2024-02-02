@@ -90,7 +90,7 @@ const SmallerThan800 = ({onOpen}:any) => {
   return (
     <Box bg="#3B435E">
       <Flex
-        h={"6rem"}
+        h={"4rem"}
         justify={"space-between"}
         align={"center"}
         style={{ marginLeft: "4vw", marginRight: "4vw" }}
