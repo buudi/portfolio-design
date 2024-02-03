@@ -1,13 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  Flex,
-  Box,
-  Image,
-  Tooltip,
-  Text,
-  useMediaQuery,
-} from "@chakra-ui/react";
+import { Flex, Box, Image, Tooltip, Text } from "@chakra-ui/react";
+
+import { useMediaQuery } from "react-responsive";
+
 import pic from "../../assets/img.jpg";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub, FaInstagram } from "react-icons/fa";
@@ -15,11 +11,13 @@ import { IoIosMail } from "react-icons/io";
 
 const MeSection = () => {
   const [showEmail, setShowEmail] = useState(false);
-  const [isLargerThan1280] = useMediaQuery("(min-width: 1280px)");
-  const [isLargerThan940] = useMediaQuery("(min-width: 940px)");
+  const isLargerThan1280 = useMediaQuery({ minWidth: "1280px" });
+  const isLargerThan940 = useMediaQuery({ minWidth: "940px" });
   const isMobile = !isLargerThan1280 && !isLargerThan940;
 
-  const iconMarginStyle = !isMobile ? { margin: "0 2rem" } : { margin: "0 0.5rem" };
+  const iconMarginStyle = !isMobile
+    ? { margin: "0 2rem" }
+    : { margin: "0 0.5rem" };
 
   return (
     <Flex
@@ -37,8 +35,17 @@ const MeSection = () => {
         borderRadius={"50%"}
         style={{ border: "3px solid #626984" }}
       />
-      <Flex align={`${isMobile && 'center'}`} marginLeft={`${isMobile ? 0 : "55px"}`} direction={"column"}>
-        <Box textAlign={isMobile ? "center" : "left"} mt={"15px"} fontSize={"2rem"} fontWeight={"bold"}>
+      <Flex
+        align={`${isMobile && "center"}`}
+        marginLeft={`${isMobile ? 0 : "55px"}`}
+        direction={"column"}
+      >
+        <Box
+          textAlign={isMobile ? "center" : "left"}
+          mt={"15px"}
+          fontSize={"2rem"}
+          fontWeight={"bold"}
+        >
           Abdullah Yaser Alnadhari
         </Box>
         <Box
@@ -64,7 +71,12 @@ const MeSection = () => {
             target="_blank"
             to="https://www.linkedin.com/in/abdullah-yaser-alnadhari-032406236/"
           >
-            <FaLinkedin size={"2.3rem"} style={!isMobile ? { marginRight: "2rem" } : {marginRight:"0.5rem"}} />
+            <FaLinkedin
+              size={"2.3rem"}
+              style={
+                !isMobile ? { marginRight: "2rem" } : { marginRight: "0.5rem" }
+              }
+            />
           </Link>
           <Link
             style={{ color: "white" }}

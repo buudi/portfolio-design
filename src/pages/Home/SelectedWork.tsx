@@ -1,8 +1,8 @@
-import { Flex, Box, useMediaQuery } from "@chakra-ui/react";
-
+import { Flex, Box } from "@chakra-ui/react";
+import { useMediaQuery } from "react-responsive";
 const SelectedWork = () => {
 
-  const [isLargerThan1280] = useMediaQuery("(min-width: 1280px)");
+  const isLargerThan1280 = useMediaQuery({minWidth: "1280px"});
   
   return (
     <Flex mt={"30px"} direction={"column"} align={"center"}>

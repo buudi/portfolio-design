@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "./pages/Home";
+import Post from "./pages/Post";
 
 import "./index.css"
 
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
   },
+  {
+    path: "/post",
+    element: <Post />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
