@@ -1,4 +1,4 @@
-import { Flex, Box } from "@chakra-ui/react";
+import { Flex, Box, Heading } from "@chakra-ui/react";
 import { useMediaQuery } from "react-responsive";
 const SelectedWork = () => {
 
@@ -6,7 +6,7 @@ const SelectedWork = () => {
   
   return (
     <Flex mt={"30px"} direction={"column"} align={"center"}>
-      <h1>Selected Work</h1>
+      <Heading>Selected Work</Heading>
       <Flex mt={"30px"} direction={`${!isLargerThan1280 ? "column" : "row"}`}>
         <Box mr={"35px"} mt="10px" w={"400px"} h={"240px"} bg={"#D9D9D9"}></Box>
         <Box mr={"35px"} mt="10px" w={"400px"} h={"240px"} bg={"#D9D9D9"}></Box>
