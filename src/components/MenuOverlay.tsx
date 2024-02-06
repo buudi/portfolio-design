@@ -34,9 +34,9 @@ const MenuOverlay = ({
   return (
     <>
       <Modal size={"full"} isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay bg="#2c3247" backdropFilter="blur(10px)" />{" "}
+        <ModalOverlay backdropFilter="blur(10px)" />{" "}
         {/* Adjust the background color and opacity */}
-        <ModalContent>
+        <ModalContent bg="#2c3247">
           <Box mb={""}>
             <MdClose
               style={{
@@ -70,7 +70,7 @@ const MenuOverlay = ({
               </Link>
             </Box>
             <Box fontWeight={fontWeights} fontSize={fontSizes} m={marginStyles}>
-              <Link className={classAssigner("/post")} to="/post">
+              <Link className={classAssigner("/blog")} to="/blog">
                 03 Blog
               </Link>
             </Box>

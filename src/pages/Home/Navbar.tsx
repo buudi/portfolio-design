@@ -98,11 +98,11 @@ const Navbar = ({ onOpen }: any) => {
             02 My Work
           </Link>
           <Link
-            className={classAssigner("/post")}
+            className={classAssigner("/blog")}
             style={
               !isLargerThan1280 && isLargerThan940 ? overRideStyles : undefined
             }
-            to="/post"
+            to="/blog"
           >
             03 Blog
           </Link>
