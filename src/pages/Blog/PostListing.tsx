@@ -7,7 +7,6 @@ import {
   Tag,
   useColorModeValue,
   Container,
-  Button,
 } from "@chakra-ui/react";
 
 interface Props {
