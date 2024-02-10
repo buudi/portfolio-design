@@ -108,20 +108,20 @@ const Navbar = ({ onOpen }: any) => {
             03 Blog
           </Link>
           <Link
-            className="linkStyles"
+            className={classAssigner("/pinboard")}
             style={
               !isLargerThan1280 && isLargerThan940 ? overRideStyles : undefined
             }
-            to="/"
+            to="/pinboard"
           >
             04 Pinboard
           </Link>
           <Link
-            className="linkStyles"
+            className={classAssigner("/me")}
             style={
               !isLargerThan1280 && isLargerThan940 ? overRideStyles : undefined
             }
-            to="/"
+            to="/me"
           >
             05 Me
           </Link>

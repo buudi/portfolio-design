@@ -15,7 +15,7 @@ const Blog = () => {
       <MenuOverlay isOpen={isOpen} onClose={onClose} />
       <Flex w={"100%"} bg={"#3B435E"} direction={"column"} justify={"center"}>
         <Box mt={"1rem"} mb={"2rem"} color={"white"} textAlign={"center"}>
-          <p style={{ fontSize: "3.5rem", fontWeight: "600" }}>/blog</p>
+          <p style={{ fontSize: "3.5rem", fontWeight: "700" }}>/blog</p>
           <p style={{ fontFamily: "halant", fontSize: "19px", margin:"0 30px 0 30px" }}>
             This blog serves as an ongoing flow of ideas. It is currently being
             used as a glorified scratchpad.
