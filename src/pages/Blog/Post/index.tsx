@@ -85,7 +85,7 @@ const SocialMediaShare = () => {
           />
         </PopoverTrigger>
         <PopoverContent
-          style={{ backgroundColor: "transparent", maxWidth: "5rem" }}
+          style={{  backgroundColor: "transparent", maxWidth: "5rem", border: "none" }}
         >
           <PopoverArrow />
           {/* <PopoverCloseButton /> */}
@@ -265,11 +265,11 @@ const Post = () => {
               <Text>&nbsp;&nbsp;&nbsp;&nbsp; 2.1 Heading 2.1</Text>
               <Text>&nbsp;&nbsp;&nbsp;&nbsp; 2.2 Heading 2.2</Text>
 
-              <Heading ml={"4rem"} size={"sm"} mt={"2rem"}>
+              <Heading ml={"1.5rem"} size={"sm"} mt={"2rem"}>
                 {" "}
                 Share
               </Heading>
-              <Flex ml={"4rem"} direction={"column"}>
+              <Flex ml={"1.5rem"} direction={"column"}>
                 <FaXTwitter style={{ marginTop: "5px" }} size={"2.5rem"} />
                 <FaSquareFacebook
                   style={{ marginTop: "5px" }}
