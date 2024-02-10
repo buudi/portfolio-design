@@ -54,8 +54,10 @@ const Navbar = ({ onOpen }: any) => {
   }, []);
 
   const classAssigner = (linkPath: string) => {
+    if (path === "/" && linkPath === "/") return "linkStyles_active";
     if (path.startsWith(linkPath) && linkPath === "/") return "linkStyles";
-    if (path.startsWith(linkPath) && linkPath !== "/") return "linkStyles_active";
+    if (path.startsWith(linkPath) && linkPath !== "/")
+      return "linkStyles_active";
     return "linkStyles";
   };
 
@@ -88,11 +90,11 @@ const Navbar = ({ onOpen }: any) => {
             01 Home
           </Link>
           <Link
-            className="linkStyles"
+            className={classAssigner("/my-work")}
             style={
               !isLargerThan1280 && isLargerThan940 ? overRideStyles : undefined
             }
-            to="/"
+            to="/my-work"
           >
             02 My Work
           </Link>

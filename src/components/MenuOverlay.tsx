@@ -12,7 +12,6 @@ const MenuOverlay = ({
   isOpen: boolean;
   onClose: () => void;
 }) => {
-
   const [path, setPath] = useState("/");
   useEffect(() => {
     const currentPath = window.location.pathname;
@@ -20,13 +19,14 @@ const MenuOverlay = ({
   }, []);
 
   const classAssigner = (linkPath: string) => {
-    if (path === linkPath) {
+    if (path === "/" && linkPath === "/") return "linkStyles_active";
+    if (path.startsWith(linkPath) && linkPath === "/") return "linkStyles";
+    if (path.startsWith(linkPath) && linkPath !== "/")
       return "linkStyles_active";
-    }
     return "linkStyles";
-  }
+  };
 
-  const isPortrait = useMediaQuery({minHeight: "500px"});
+  const isPortrait = useMediaQuery({ minHeight: "500px" });
 
   const marginStyles = isPortrait ? "2rem 2rem" : "1rem 1rem";
   const fontWeights = isPortrait ? "bold" : "normal";
@@ -65,7 +65,7 @@ const MenuOverlay = ({
             </Box>
 
             <Box fontWeight={fontWeights} fontSize={fontSizes} m={marginStyles}>
-              <Link className="linkStyles" to="/">
+              <Link className={classAssigner("/my-work")} to="/my-work">
                 02 My Work
               </Link>
             </Box>
@@ -76,13 +76,13 @@ const MenuOverlay = ({
             </Box>
 
             <Box fontWeight={fontWeights} fontSize={fontSizes} m={marginStyles}>
-              <Link className="linkStyles" to="/">
+              <Link className={classAssigner("/pinboard")} to="/pinboard">
                 04 Pinboard
               </Link>
             </Box>
 
             <Box fontWeight={fontWeights} fontSize={fontSizes} m={marginStyles}>
-              <Link className="linkStyles" to="/">
+              <Link className={classAssigner("/me")} to="/me">
                 05 Me
               </Link>
             </Box>
