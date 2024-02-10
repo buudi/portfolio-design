@@ -9,6 +9,8 @@ import {
   Container,
 } from "@chakra-ui/react";
 
+import { Link } from "react-router-dom";
+
 interface Props {
   marginTop?: number;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -25,8 +27,6 @@ const BlogTags = (props: Props) => {
           <Tag
             size={"md"}
             variant="solid"
-            bg={"#F5F5F5"}
-            color={"black"}
             key={tag}
           >
             {tag}
@@ -91,14 +91,13 @@ const ArticleList = () => {
         >
           <BlogTags tags={["Backend", "Database"]} />
           <Heading marginTop="1">
-            <Text textDecoration="none" _hover={{ textDecoration: "none" }}>
-              Blog post Title; Lorem ipsum dolor sit amet
-            </Text>
+            <Link to={"/blog/post"}>
+              <Text textDecoration="none" _hover={{ textDecoration: "underline dotted" }}>
+                Blog post Title; Lorem ipsum dolor sit amet
+              </Text>
+            </Link>
           </Heading>
-          <Text
-            as="p"
-            fontSize="sm"
-          >
+          <Text as="p" fontSize="sm">
             <i>03, feb 2024</i>
           </Text>
           <Text
@@ -120,7 +119,7 @@ const ArticleList = () => {
             textAlign={"center"}
             borderBottom={"1px solid"}
           >
-            CONTINUE READING ...
+            <Link to={"/blog/post"}><Text _hover={{textShadow: "#3B435E 1px 0 10px"}}>continue reading...</Text></Link>
           </Box>
         </Box>
       </Box>

@@ -76,7 +76,7 @@ const Navbar = ({ onOpen }: any) => {
   return (
     <Box bg="#3B435E">
       <Flex
-        h={"6rem"}
+        h={"4.5rem"}
         justify={"space-between"}
         align={"center"}
         style={isLargerThan1280 ? xlMargins : lgMargins}
