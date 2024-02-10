@@ -54,14 +54,13 @@ const Navbar = ({ onOpen }: any) => {
   }, []);
 
   const classAssigner = (linkPath: string) => {
-    if (path === linkPath) {
-      return "linkStyles_active";
-    }
+    if (path.startsWith(linkPath) && linkPath === "/") return "linkStyles";
+    if (path.startsWith(linkPath) && linkPath !== "/") return "linkStyles_active";
     return "linkStyles";
-  }
+  };
 
-  const isLargerThan1280 = useMediaQuery({minWidth: "1280px"});
-  const isLargerThan940 = useMediaQuery({minWidth: "940px"});
+  const isLargerThan1280 = useMediaQuery({ minWidth: "1280px" });
+  const isLargerThan940 = useMediaQuery({ minWidth: "940px" });
 
   const isMobile = !isLargerThan940 && !isLargerThan1280;
 

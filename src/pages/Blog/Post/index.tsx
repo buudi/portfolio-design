@@ -8,6 +8,7 @@ import {
   Image,
   Flex,
   useDisclosure,
+  Link,
 } from "@chakra-ui/react";
 import {
   IconButton,
@@ -36,7 +37,13 @@ const SocialMediaShare = () => {
 
   const socialMediaIcons = [
     {
-      icon: <FaXTwitter color="black" style={{background:"white"}} size={"2.5rem"} />,
+      icon: (
+        <FaXTwitter
+          color="black"
+          style={{ background: "white" }}
+          size={"2.5rem"}
+        />
+      ),
       label: "Twitter",
       link: "twitter.com",
     },
@@ -45,19 +52,31 @@ const SocialMediaShare = () => {
         <FaSquareFacebook
           color="#3B5998"
           size={"2.5rem"}
-          style={{ background:"white", marginTop: "0.6rem" }}
+          style={{ background: "white", marginTop: "0.6rem" }}
         />
       ),
       label: "Facebook",
       link: "facebook.com",
     },
     {
-      icon: <FaYCombinator size={"2.5rem"} color="#FF6600" style={{ background:"white", marginTop: "0.6rem" }}  />,
+      icon: (
+        <FaYCombinator
+          size={"2.5rem"}
+          color="#FF6600"
+          style={{ background: "white", marginTop: "0.6rem" }}
+        />
+      ),
       label: "Hacker News",
       link: "news.ycombinator.com",
     },
     {
-      icon: <FaSquareReddit size={"2.5rem"} color="#FF5700" style={{ background:"white", marginTop: "0.6rem" }} />,
+      icon: (
+        <FaSquareReddit
+          size={"2.5rem"}
+          color="#FF5700"
+          style={{ background: "white", marginTop: "0.6rem" }}
+        />
+      ),
       label: "Reddit",
       link: "reddit.com",
     },
@@ -85,7 +104,11 @@ const SocialMediaShare = () => {
           />
         </PopoverTrigger>
         <PopoverContent
-          style={{  backgroundColor: "transparent", maxWidth: "5rem", border: "none" }}
+          style={{
+            backgroundColor: "transparent",
+            maxWidth: "5rem",
+            border: "none",
+          }}
         >
           <PopoverArrow />
           {/* <PopoverCloseButton /> */}
@@ -119,11 +142,27 @@ const Post = () => {
   });
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  //   const headingRef = useRef<HTMLDivElement>(null)
+  //   const handleTocClick = () => {
+  //     if (headingRef.current) {
+  //       const navbarHeight = 600; // Example value, adjust according to your navbar height
+  //       window.scrollTo({
+  //         top: headingRef.current.offsetTop - navbarHeight,
+  //         behavior: 'smooth',
+  //       });
+  //     }
+  //   };
+
   return (
     <div>
-      <div style={{ position: "sticky", top: "0" }}>
+      {isMobile ? (
+        <div style={{ position: "sticky", top: "0" }}>
+          <Navbar onOpen={onOpen} />
+        </div>
+      ) : (
         <Navbar onOpen={onOpen} />
-      </div>
+      )}
+
       <MenuOverlay isOpen={isOpen} onClose={onClose} />
 
       <Container mt={"7vh"} minW={"70%"} bg={"white"}>
@@ -158,9 +197,14 @@ const Post = () => {
                 <Text>&nbsp;&nbsp;&nbsp;&nbsp; 2.2 Heading 2.2</Text>
               </Box>
             )}
-
+            <div
+              id="dummy_anchor1"
+              style={{ position: "absolute", top: "-65px", left: 0 }}
+            ></div>
             <Text fontSize={"1.2rem"} mt={"30px"}>
-              <Heading size={"lg"}>Heading 1</Heading>
+              <Heading id="heading1" size={"lg"}>
+                Heading 1
+              </Heading>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Ultrices mi tempus imperdiet nulla malesuada pellentesque elit.
@@ -176,9 +220,15 @@ const Post = () => {
               convallis. Eu facilisis sed odio morbi quis commodo odio. Blandit
               aliquam etiam erat velit scelerisque in dictum non consectetur.
               Ipsum dolor sit amet consectetur.
-              <br />
-              <br />
-              <Heading size={"md"}>Heading 1.1</Heading>
+              {/* <div id="dummy_anchor1.1" style={{ paddingTop: "4rem" }}></div> */}
+              {/* <div id="dummy_anchor1.1" style={{ position: "absolute", top: "4.5rem", left: 0 }}></div> */}
+              <Heading id="heading1.1" size={"md"}>
+                Heading 1.1
+              </Heading>
+              <a
+                id="dummy_anchor1.1"
+                style={{ position: "absolute", top: "-4.5", left: 0 }}
+              ></a>
               Non sodales neque sodales ut. Auctor eu augue ut lectus arcu
               bibendum at. Pellentesque massa placerat duis ultricies lacus sed.
               Scelerisque fermentum dui faucibus in ornare. Posuere urna nec
@@ -258,8 +308,12 @@ const Post = () => {
               minW={"25%"}
             >
               <Heading size={"sm"}>Table Of Contents</Heading>
-              <Text>1. Heading 1</Text>
-              <Text>&nbsp;&nbsp;&nbsp;&nbsp; 1.1 Heading 1.1</Text>
+              <Link href="#heading1">1. Heading 1</Link>
+              <Text>
+                <Link href="#heading1.1">
+                  &nbsp;&nbsp;&nbsp;&nbsp; 1.1 Heading 1.1
+                </Link>
+              </Text>
               <Text>&nbsp;&nbsp;&nbsp;&nbsp; 1.2 Heading 1.2</Text>
               <Text>2. Heading 2</Text>
               <Text>&nbsp;&nbsp;&nbsp;&nbsp; 2.1 Heading 2.1</Text>
