@@ -1,7 +1,10 @@
-import { Flex, Box, useDisclosure } from "@chakra-ui/react";
+import { Flex, Box, useDisclosure, Container, Heading } from "@chakra-ui/react";
 
 import Navbar from "../Home/Navbar";
 import MenuOverlay from "../../components/MenuOverlay";
+
+import Project1 from "./SelectedProjectCards/Project1";
+import Project2 from "./SelectedProjectCards/Project2";
 
 const MyWork = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -20,10 +23,22 @@ const MyWork = () => {
               margin: "0 30px 0 30px",
             }}
           >
-            some description here
+            A selection of projects I worked on, and some other things I've
+            built.
           </p>
         </Box>
       </Flex>
+      {/* Selected Projects section: */}
+      <Container minW={"60%"}>
+        <Heading mt={"2rem"} textAlign={"center"}>
+          Selected Projects
+        </Heading>
+        <Project1 />
+        <Project2 />
+        <Project1 />
+        <Project2 />
+      </Container>
+      {/* Other Projects section: */}
     </>
   );
 };
