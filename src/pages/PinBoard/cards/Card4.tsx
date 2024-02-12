@@ -6,14 +6,16 @@ import {
   Heading,
   Text,
   Button,
-  Tag
+  Tag,
 } from "@chakra-ui/react";
 
 const Card4 = () => {
   return (
-    <Card bg={"#D6DBDF"}>
+    <Card>
       <CardHeader>
-      <Tag bg={"gray.300"} borderRadius={"25px"} mb={"10px"} p={"5px"}>React</Tag>
+        <Tag bg={"gray.100"} borderRadius={"25px"} mb={"10px"} p={"5px"}>
+          React
+        </Tag>
 
         <Heading size="md"> 1. Customer dashboard</Heading>
       </CardHeader>
@@ -21,7 +23,7 @@ const Card4 = () => {
         <Text>View a summary of all your customers over the last month.</Text>
       </CardBody>
       <CardFooter>
-        <Button>View here</Button>
+        <Button w="100%" size={"sm"}>View here</Button>
       </CardFooter>
     </Card>
   );
