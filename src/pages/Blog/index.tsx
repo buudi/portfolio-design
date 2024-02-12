@@ -23,7 +23,7 @@ const Blog = () => {
         </Box>
       </Flex>
       <Center mt={"1.2rem"}>
-        <Tabs>
+        <Tabs flexWrap={"wrap"}>
           <TabList>
             <Tab>All (23)</Tab>
             <Tab>Fullstack (8)</Tab>

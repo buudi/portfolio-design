@@ -1,7 +1,18 @@
-import { Flex, Box, useDisclosure } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  useDisclosure,
+  SimpleGrid,
+  TabList,
+  Tabs,
+  Tab,
+  Center,
+} from "@chakra-ui/react";
 
 import Navbar from "../Home/Navbar";
 import MenuOverlay from "../../components/MenuOverlay";
+
+import Card4 from "./cards/Card4";
 
 const PinBoard = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -20,10 +31,36 @@ const PinBoard = () => {
               margin: "0 30px 0 30px",
             }}
           >
-            some description here
+            A collection of links I pin, serving as inspiration for my work and
+            aspirations.
           </p>
         </Box>
       </Flex>
+      <Center>
+        <Tabs mt={"1rem"}>
+          <TabList flexWrap={"wrap"}>
+            <Tab>Backend</Tab>
+            <Tab>Frontend</Tab>
+            <Tab>Database</Tab>
+            <Tab>Devops</Tab>
+          </TabList>
+        </Tabs>
+      </Center>
+      <SimpleGrid
+        mt={"1rem"}
+        mr={"12vw"}
+        ml={"12vw"}
+        spacing={4}
+        templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
+      >
+        <Card4 />
+        <Card4 />
+        <Card4 />
+        <Card4 />
+        <Card4 />
+        <Card4 />
+        <Card4 />
+      </SimpleGrid>
     </div>
   );
 };
