@@ -16,7 +16,7 @@ const Hero2 = () => {
           fontFamily={"halant"}
           textAlign={"center"}
         >
-          Who is Abdullah?
+          My Guiding Principles
         </Heading>
 
         <Box mt={"5rem"}>

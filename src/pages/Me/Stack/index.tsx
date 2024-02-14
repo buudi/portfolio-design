@@ -2,6 +2,89 @@ import { Flex, Box, Heading, Text, SimpleGrid } from "@chakra-ui/react";
 import { useMediaQuery } from "react-responsive";
 import Technology from "./Technology";
 
+interface Skill {
+  name: string;
+  description: string;
+  icon: string;
+  link: string;
+}
+
+const stackTechnologies: Skill[] = [
+  {
+    name: "Typescript",
+    description: "web development",
+    icon: "#D9D9D9",
+    link: "https://www.typescriptlang.org/",
+  },
+  {
+    name: "Javascript",
+    description: "web development",
+    icon: "#D9D9D9",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  {
+    name: "React",
+    description: "web development",
+    icon: "#D9D9D9",
+    link: "https://react.dev/",
+  },
+  {
+    name: "Node.js",
+    description: "web development",
+    icon: "#D9D9D9",
+    link: "https://nodejs.org/en/",
+  },
+  {
+    name: "Ant Design",
+    description: "web design",
+    icon: "#D9D9D9",
+    link: "https://ant.design/",
+  },
+  {
+    name: "Chakra UI",
+    description: "web design",
+    icon: "#D9D9D9",
+    link: "https://chakra-ui.com/",
+  },
+  {
+    name: "PostgreSQL",
+    description: "database",
+    icon: "#D9D9D9",
+    link: "https://www.postgresql.org/",
+  },
+  {
+    name: "DigitalOcean",
+    description: "DevOps",
+    icon: "#D9D9D9",
+    link: "https://www.digitalocean.com/",
+  },
+  {
+    name: "Vercel",
+    description: "DevOps",
+    icon: "#D9D9D9",
+    link: "https://vercel.com/",
+  },
+  {
+    name: "Figma",
+    description: "design",
+    icon: "#D9D9D9",
+    link: "https://www.figma.com",
+  },
+  {
+    name: "Postman",
+    description: "API testing",
+    icon: "#D9D9D9",
+    link: "https://www.postman.com/",
+  },
+  {
+    name: "VS Code",
+    description: "IDE",
+    icon: "#D9D9D9",
+    link: "https://code.visualstudio.com/",
+  },
+];
+
+
 const Stack = () => {
   const isMobile = !useMediaQuery({
     query: "(min-width: 1224px)",
@@ -33,11 +116,15 @@ const Stack = () => {
         </Text>
 
         <SimpleGrid mt={"22px"} columns={isMobile ? 1 : 2} spacingX={"15vw"}>
-          {Array.from({ length: 12 }).map((_, index) => (
-            <Technology key={index} />
+          {stackTechnologies.map((technology, index) => (
+            <Technology
+              key={index}
+              name={technology.name}
+              description={technology.description}
+            />
           ))}
         </SimpleGrid>
-        <Heading
+        {/* <Heading
           fontFamily={"inter"}
           textAlign={"center"}
           fontWeight={"600"}
@@ -49,10 +136,14 @@ const Stack = () => {
         </Heading>
 
         <SimpleGrid mt={"22px"} columns={isMobile ? 1 : 2} spacingX={"15vw"}>
-          {Array.from({ length: 6 }).map((_, index) => (
-            <Technology key={index} />
+          {skills.map((skill, index) => (
+            <Technology
+              key={index}
+              name={skill.name}
+              description={skill.description}
+            />
           ))}
-        </SimpleGrid>
+        </SimpleGrid> */}
       </Flex>
     </Box>
   );
