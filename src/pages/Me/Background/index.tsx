@@ -1,4 +1,4 @@
-import { Container, Flex, Box, Heading } from "@chakra-ui/react";
+import { Container, Box, Heading } from "@chakra-ui/react";
 import EduCard from "./EduCard";
 
 const Background = () => {

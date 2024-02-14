@@ -6,7 +6,6 @@ import {
   Flex,
   Text,
   Image,
-  useColorModeValue,
   Container,
   Tag,
   StackProps,
@@ -34,7 +33,7 @@ const EduCard = () => {
             py={5}
             borderWidth="1px"
             _hover={{ shadow: "lg" }}
-            bg={useColorModeValue("white", "gray.800")}
+            bg={"white"}
             position="relative"
             rounded="md"
           >
@@ -50,10 +49,10 @@ const EduCard = () => {
                   alt={alt}
                 />
                 <Stack spacing={2} pl={3} align="left">
-                  <Heading align="left" fontSize="xl">
+                  <Heading textAlign="left" fontSize="xl">
                     {title}
                   </Heading>
-                  <Heading align="left" fontSize="sm">
+                  <Heading textAlign="left" fontSize="sm">
                     {role}
                   </Heading>
                   <Tags
