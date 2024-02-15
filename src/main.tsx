@@ -10,6 +10,7 @@ import Post from "./pages/Blog/Post";
 import MyWork from "./pages/MyWork";
 import PinBoard from "./pages/PinBoard";
 import Me from "./pages/Me";
+import Post1 from "./pages/Blog/posts/Post1"
 
 import "./index.css";
 
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/blog/post",
         element: <Post />,
+      },
+      {
+        path:"/blog/post/1",
+        element: <Post1 />
       },
       {
         path: "/my-work",

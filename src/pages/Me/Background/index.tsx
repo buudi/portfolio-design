@@ -12,7 +12,7 @@ const Background = () => {
       </Heading>
       <Box mt={"1rem"}>
         <EduCard />
-        <EduCard />
+        <EduCard /> 
       </Box>
       <Heading mt={"2rem"} fontWeight={"500"} textAlign={"center"}>
         02 Education

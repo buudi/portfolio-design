@@ -5,6 +5,7 @@ import { Tabs, TabList, Tab } from "@chakra-ui/react";
 import Navbar from "../Home/Navbar";
 import MenuOverlay from "../../components/MenuOverlay";
 import PostListing from "./PostListing";
+import Post1 from "../Blog/posts/Post1/Listing";
 
 const Blog = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -32,6 +33,7 @@ const Blog = () => {
           </TabList>
         </Tabs>
       </Center>
+      <Post1 />
       <PostListing />
       <PostListing />
       <PostListing />
