@@ -8,16 +8,13 @@ import {
   Image,
   Flex,
   useDisclosure,
-  Link,
 } from "@chakra-ui/react";
 import { useMediaQuery } from "react-responsive";
 
 import Navbar from "../../../Home/Navbar";
 import MenuOverlay from "../../../../components/MenuOverlay";
 
-import SocialMediaShareMobile from "./SocialMediaShareMobile";
 import PostContent from "./PostContent";
-import SocialMediaShare from "./SocialMediaShare";
 
 interface PostProps {
   title: string;
