@@ -59,7 +59,6 @@ const MeSection = () => {
             <Link
               to="https://utm.my/"
               target="_blank"
-              textDecoration={"underline"}
             >
               <Box as="span" textDecoration={"underline"} _hover={{ color: "#872D4A" }}>
                 UTM
