@@ -75,15 +75,15 @@ const MenuOverlay = ({
               </Link>
             </Box>
 
-            <Box fontWeight={fontWeights} fontSize={fontSizes} m={marginStyles}>
+            {/* <Box fontWeight={fontWeights} fontSize={fontSizes} m={marginStyles}>
               <Link className={classAssigner("/pinboard")} to="/pinboard">
                 04 Pinboard
               </Link>
-            </Box>
+            </Box> */}
 
             <Box fontWeight={fontWeights} fontSize={fontSizes} m={marginStyles}>
               <Link className={classAssigner("/me")} to="/me">
-                05 Me
+                04 Me
               </Link>
             </Box>
           </Flex>

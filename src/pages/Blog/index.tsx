@@ -25,18 +25,18 @@ const Blog = () => {
       </Flex>
       <Center mt={"1.2rem"}>
         <Tabs flexWrap={"wrap"}>
-          <TabList>
+          {/* <TabList>
             <Tab>All (23)</Tab>
             <Tab>Fullstack (8)</Tab>
             <Tab>Backend (10)</Tab>
             <Tab>Life (5)</Tab>
-          </TabList>
+          </TabList> */}
         </Tabs>
       </Center>
       <Post1 />
+      {/* <PostListing />
       <PostListing />
-      <PostListing />
-      <PostListing />
+      <PostListing /> */}
     </div>
   );
 };

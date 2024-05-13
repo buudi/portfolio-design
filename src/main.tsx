@@ -39,10 +39,10 @@ const router = createBrowserRouter([
         path: "/my-work",
         element: <MyWork />,
       },
-      {
-        path: "/pinboard",
-        element: <PinBoard />,
-      },
+      // {
+      //   path: "/pinboard",
+      //   element: <PinBoard />,
+      // },
       {
         path: "/me",
         element: <Me />,

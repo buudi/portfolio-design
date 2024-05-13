@@ -2,10 +2,24 @@ import { Flex, Box, Heading, Text, SimpleGrid } from "@chakra-ui/react";
 import { useMediaQuery } from "react-responsive";
 import Technology from "./Technology";
 
+import {
+  SiTypescript,
+  SiAntdesign,
+  SiChakraui,
+  SiDigitalocean,
+  SiVercel,
+  SiPostman,
+} from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { CgFigma } from "react-icons/cg";
+import { IoLogoJavascript, IoLogoReact } from "react-icons/io5";
+import { VscVscode } from "react-icons/vsc";
+
 interface Skill {
   name: string;
   description: string;
-  icon: string;
+  icon: any;
   link: string;
 }
 
@@ -13,77 +27,76 @@ const stackTechnologies: Skill[] = [
   {
     name: "Typescript",
     description: "web development",
-    icon: "#D9D9D9",
+    icon: <SiTypescript color="white" size={60} />,
     link: "https://www.typescriptlang.org/",
   },
   {
     name: "Javascript",
     description: "web development",
-    icon: "#D9D9D9",
+    icon: <IoLogoJavascript color="white" size={60} />,
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
     name: "React",
     description: "web development",
-    icon: "#D9D9D9",
+    icon: <IoLogoReact color="white" size={60} />,
     link: "https://react.dev/",
   },
   {
     name: "Node.js",
     description: "web development",
-    icon: "#D9D9D9",
+    icon: <FaNodeJs color="white" size={60} />,
     link: "https://nodejs.org/en/",
   },
   {
     name: "Ant Design",
     description: "web design",
-    icon: "#D9D9D9",
+    icon: <SiAntdesign color="white" size={60} />,
     link: "https://ant.design/",
   },
   {
     name: "Chakra UI",
     description: "web design",
-    icon: "#D9D9D9",
+    icon: <SiChakraui color="white" size={60} />,
     link: "https://chakra-ui.com/",
   },
   {
     name: "PostgreSQL",
     description: "database",
-    icon: "#D9D9D9",
+    icon: <BiLogoPostgresql color="white" size={60} />,
     link: "https://www.postgresql.org/",
   },
   {
     name: "DigitalOcean",
     description: "DevOps",
-    icon: "#D9D9D9",
+    icon: <SiDigitalocean color="white" size={60} />,
     link: "https://www.digitalocean.com/",
   },
   {
     name: "Vercel",
     description: "DevOps",
-    icon: "#D9D9D9",
+    icon: <SiVercel color="white" size={60} />,
     link: "https://vercel.com/",
   },
   {
     name: "Figma",
     description: "design",
-    icon: "#D9D9D9",
+    icon: <CgFigma color="white" size={60} />,
     link: "https://www.figma.com",
   },
   {
     name: "Postman",
     description: "API testing",
-    icon: "#D9D9D9",
+    icon: <SiPostman color="white" size={60} />,
     link: "https://www.postman.com/",
   },
   {
     name: "VS Code",
     description: "IDE",
-    icon: "#D9D9D9",
+    icon: <VscVscode color="white" size={60} />,
     link: "https://code.visualstudio.com/",
   },
 ];
-
 
 const Stack = () => {
   const isMobile = !useMediaQuery({
@@ -120,6 +133,7 @@ const Stack = () => {
             <Technology
               key={index}
               name={technology.name}
+              icon={technology.icon}
               description={technology.description}
             />
           ))}

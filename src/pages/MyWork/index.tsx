@@ -4,7 +4,8 @@ import Navbar from "../Home/Navbar";
 import MenuOverlay from "../../components/MenuOverlay";
 
 import Project1 from "./SelectedProjectCards/Project1";
-import Project2 from "./SelectedProjectCards/Project2";
+// import Project2 from "./SelectedProjectCards/Project2";
+import SmallProject from "./SelectedProjectCards/SmallProject"
 
 const MyWork = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -34,9 +35,10 @@ const MyWork = () => {
           Selected Projects
         </Heading>
         <Project1 />
-        <Project2 />
+        {/* <SmallProject /> */}
+        {/* <Project2 />
         <Project1 />
-        <Project2 />
+        <Project2 /> */}
       </Container>
       {/* Other Projects section: */}
     </>

@@ -95,7 +95,7 @@ const Project1 = () => {
               variant={"outline"}
               _hover={{ background: "#D6DBDF" }}
             >
-              Read Case Study
+              <a href="https://drive.google.com/file/d/1S1UqzjEfGgTaJSiax1NcJ-TqRLgrkECO/view" target="_blank">Read Case Study</a>
             </Button>
           </Flex>
         </Flex>

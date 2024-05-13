@@ -122,7 +122,7 @@ const ArticleListing = () => {
             textAlign={"center"}
             borderBottom={"1px solid"}
           >
-            <Link to={"/blog/post"}>
+            <Link to={"/blog/post/1"}>
               <Text _hover={{ textShadow: "#3B435E 1px 0 10px" }}>
                 continue reading...
               </Text>

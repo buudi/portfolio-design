@@ -22,8 +22,8 @@ const Me = () => {
       </Flex>
       <Hero2 />
       <Stack />
-      <Certifications />
-      <Background />  
+      {/* <Certifications />
+      <Background />   */}
       <HireMe />
     </div>
   );

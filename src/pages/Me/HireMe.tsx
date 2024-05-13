@@ -4,8 +4,10 @@ import { Container, Heading, Text, Box, Button, Flex } from "@chakra-ui/react";
 const HireMe = () => {
   const [revealEmail, setRevealEmail] = useState(false);
   return (
-    <div style={{ backgroundColor: "#3B435E" }}>
-      <Container p={"4rem"} color={"white"} mt={"4rem"} maxW={"container.xl"}>
+    // <div style={{ backgroundColor: "#3B435E" }}>
+    <div>
+
+      <Container p={"4rem"} mt={"1rem"} maxW={"container.xl"}>
         <Heading
           textAlign={"center"}
           fontFamily={"inter"}

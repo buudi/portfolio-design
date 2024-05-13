@@ -107,7 +107,7 @@ const Navbar = ({ onOpen }: any) => {
           >
             03 Blog
           </Link>
-          <Link
+          {/* <Link
             className={classAssigner("/pinboard")}
             style={
               !isLargerThan1280 && isLargerThan940 ? overRideStyles : undefined
@@ -115,7 +115,7 @@ const Navbar = ({ onOpen }: any) => {
             to="/pinboard"
           >
             04 Pinboard
-          </Link>
+          </Link> */}
           <Link
             className={classAssigner("/me")}
             style={
@@ -123,7 +123,7 @@ const Navbar = ({ onOpen }: any) => {
             }
             to="/me"
           >
-            05 Me
+            04 Me
           </Link>
         </Flex>
       </Flex>

@@ -1,6 +1,11 @@
-import { Container, Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Container, Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
 
 import { useMediaQuery } from "react-responsive";
+
+import pic from "../../assets/img7.jpg";
+import pic2 from "../../assets/img4.jpg";
+import pic3 from "../../assets/img5.jpg";
+
 
 const Hero2 = () => {
   const isMobile = !useMediaQuery({
@@ -41,7 +46,14 @@ const Hero2 = () => {
               understanding drives me to explore, challenge myself, and
               constantly seek new perspectives and skills.
             </Text>
-            <Box bg={"#D9D9D9"} w={"60vw"} h={"300px"}></Box>
+            {/* <Box bg={"#D9D9D9"} w={"60vw"} h={"300px"}> */}
+            <Image
+              src={pic}
+              fit={"contain"}
+              h={"300px"}
+              style={{ border: "3px solid #626984" }}
+            />
+            {/* </Box> */}
           </Flex>
         </Box>
 
@@ -66,7 +78,14 @@ const Hero2 = () => {
               Embracing mistakes as inevitable companions on my journey, I
               transform them into valuable insights for future growth.
             </Text>
-            <Box bg={"#D9D9D9"} w={"60vw"} h={"300px"}></Box>
+            {/* <Box bg={"#D9D9D9"} w={"60vw"} h={"300px"}> */}
+            <Image
+              src={pic3}
+              fit={"contain"}
+              h={"300px"}
+              style={{ border: "3px solid #626984" }}
+            />
+            {/* </Box> */}
           </Flex>
         </Box>
 
@@ -92,7 +111,14 @@ const Hero2 = () => {
               communication, active listening, and mutual respect are the
               cornerstones of my team player approach.
             </Text>
-            <Box bg={"#D9D9D9"} w={"60vw"} h={"300px"}></Box>
+            {/* <Box bg={"#D9D9D9"} w={"60vw"} h={"300px"}> */}
+            <Image
+              src={pic2}
+              fit={"contain"}
+              h={"300px"}
+              style={{ border: "3px solid #626984" }}
+            />
+            {/* </Box> */}
           </Flex>
         </Box>
       </Flex>

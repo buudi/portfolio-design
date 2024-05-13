@@ -1,6 +1,8 @@
-import { Flex, Container, Box, Text, Link } from "@chakra-ui/react";
+import { Flex, Container, Box, Text, Link, Image } from "@chakra-ui/react";
 
 import { useMediaQuery } from "react-responsive";
+
+import pic from "../../assets/img2.jpg";
 
 const Hero1 = () => {
   const isMobile = !useMediaQuery({
@@ -10,7 +12,14 @@ const Hero1 = () => {
   return (
     <Container mt={"2rem"} mb={"2rem"} maxW={"container.xl"}>
       <Flex direction={isMobile ? "column" : "row"}>
-        <Box bg={"#D9D9D9"} w={"80vw"} h={"300px"}></Box>
+        {/* <Box bg={"#D9D9D9"} w={"80vw"} h={"300px"}> */}
+        <Image
+          src={pic}
+          w={"600px"}
+          h={"500px"}
+          style={{ border: "3px solid #626984" }}
+        />
+        {/* </Box> */}
         <Text
           ml={"3vw"}
           mt={isMobile ? "2rem" : "0"}
@@ -29,7 +38,8 @@ const Hero1 = () => {
             _hover={{ color: "#872D4A" }}
           >
             UTM
-          </Link>.
+          </Link>
+          .
         </Text>
       </Flex>
     </Container>

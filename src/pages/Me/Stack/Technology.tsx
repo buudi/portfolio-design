@@ -1,10 +1,10 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 
-const Technology = ({ name, description }: { name: string, description: string }) => {
+const Technology = ({ name, description, icon }: { name: string, description: string, icon: any }) => {
   return (
     <Box mt={"2rem"}>
       <Flex>
-        <Box borderRadius={"20px"} w={"80px"} h={"80px"} bg={"#D9D9D9"}></Box>
+        <Box borderRadius={"20px"} w={"80px"} h={"80px"}>{icon}</Box>
         <Box alignSelf={"center"} ml={"12px"} color={"white"}>
           <Text fontFamily={"inter"} fontWeight={"bold"} fontSize={"1.5rem"}>
             {name}
