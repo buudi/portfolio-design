@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Flex, Box, Image, Tooltip, Text } from "@chakra-ui/react";
+import { Flex, Box, Image, Tooltip, Text, Button } from "@chakra-ui/react";
 
 import { useMediaQuery } from "react-responsive";
 
@@ -55,12 +55,22 @@ const MeSection = () => {
           marginTop={"18px"}
         >
           <Text textAlign={!isMobile ? "justify" : "left"}>
-            I'm Abdullah, a full-stack developer with a focus on backend
-            operations. Specializing in creating internal tools for businesses,
-            my solutions automate processes and streamline data management.
-            Explore my work and feel free to get in touch!
+            I'm Abdullah, a Computer Science student at{" "}
+            <Link
+              to="https://utm.my/"
+              target="_blank"
+              textDecoration={"underline"}
+            >
+              <Box as="span" textDecoration={"underline"} _hover={{ color: "#872D4A" }}>
+                UTM
+              </Box>
+            </Link>
+            !{" "}I love working on the Web and Software. Explore my work and feel
+            free to get in touch!
           </Text>
+          
         </Box>
+        
         <Flex
           marginTop={`${!isMobile ? "40px" : "20px"}`}
           mb={`${isMobile && "20px"}`}
@@ -104,8 +114,19 @@ const MeSection = () => {
               />
             </span>
           </Tooltip>
-          {showEmail && <span> buudi.dev at gmail dot com</span>}
+          {showEmail && <span> buudi.dev [at] gmail [dot] com</span>}
         </Flex>
+        <Button
+          as="a"
+          href="https://drive.google.com/file/d/11sFA530EWxDKvX4hQ4AWkDqM5BvyHo7g/view?usp=sharing"
+          target="_blank"
+          mt={isMobile ? "2rem" : "0"}
+          ml={isMobile ? "0" : "1rem"}
+          w={isMobile ? "100%" : "30%"}
+          alignSelf={isMobile ? "center" : "flex-end"}
+        >
+          View Resume
+        </Button>
       </Flex>
     </Flex>
   );
