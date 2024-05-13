@@ -1,4 +1,4 @@
-import { Flex, Container, Box, Text, Link, Image } from "@chakra-ui/react";
+import { Flex, Container, Text, Link, Image } from "@chakra-ui/react";
 
 import { useMediaQuery } from "react-responsive";
 

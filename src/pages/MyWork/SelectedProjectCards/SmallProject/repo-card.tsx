@@ -36,7 +36,6 @@ const RepositoryCard = (props: RepositoryCardProps) => {
 
   return (
     <Box
-      size="xl"
       py={2}
       px={[2, 4]}
       mt={2}

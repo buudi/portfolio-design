@@ -1,10 +1,9 @@
 import { useDisclosure } from "@chakra-ui/react";
 import { Box, Flex, Center } from "@chakra-ui/react";
-import { Tabs, TabList, Tab } from "@chakra-ui/react";
 
 import Navbar from "../Home/Navbar";
 import MenuOverlay from "../../components/MenuOverlay";
-import PostListing from "./PostListing";
+// import PostListing from "./PostListing";
 import Post1 from "../Blog/posts/Post1/Listing";
 
 const Blog = () => {
@@ -24,14 +23,14 @@ const Blog = () => {
         </Box>
       </Flex>
       <Center mt={"1.2rem"}>
-        <Tabs flexWrap={"wrap"}>
+        {/* <Tabs flexWrap={"wrap"}> */}
           {/* <TabList>
             <Tab>All (23)</Tab>
             <Tab>Fullstack (8)</Tab>
             <Tab>Backend (10)</Tab>
             <Tab>Life (5)</Tab>
           </TabList> */}
-        </Tabs>
+        {/* </Tabs> */}
       </Center>
       <Post1 />
       {/* <PostListing />

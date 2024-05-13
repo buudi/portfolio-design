@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import Blog from "./pages/Blog";
 import Post from "./pages/Blog/Post";
 import MyWork from "./pages/MyWork";
-import PinBoard from "./pages/PinBoard";
+// import PinBoard from "./pages/PinBoard";
 import Me from "./pages/Me";
 import Post1 from "./pages/Blog/posts/Post1"
 

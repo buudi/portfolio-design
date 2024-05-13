@@ -6,8 +6,8 @@ import MenuOverlay from "../../components/MenuOverlay";
 import Hero1 from "./Hero1";
 import Hero2 from "./Hero2";
 import Stack from "./Stack";
-import Certifications from "./Certifications";
-import Background from "./Background";
+// import Certifications from "./Certifications";
+// import Background from "./Background";
 import HireMe from "./HireMe";
 
 const Me = () => {

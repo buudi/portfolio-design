@@ -1,4 +1,3 @@
-import * as React from "react";
 import { useMediaQuery, Container } from "@chakra-ui/react";
 import RepositoryCard from "./repo-card";
 import repositoriesList from "./repos-list";
